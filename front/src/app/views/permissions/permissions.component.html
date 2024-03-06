@@ -1,0 +1,24 @@
+<h4>Listado de Solicitudes</h4>
+
+<hr>
+
+<table cTable small>
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Días Solicitados</th>
+            <th scope="col">Estatus</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let permission of permissions;let i = index">
+            <th scope="row">{{i + 1}}</th>
+            <td>{{permission.typeName}}</td>
+            <td>{{permission.date}}</td>
+            <td>{{permission.daysAmount}}</td>
+            <td>{{permission.statusName}}</td>
+        </tr>
+    </tbody>
+</table>
